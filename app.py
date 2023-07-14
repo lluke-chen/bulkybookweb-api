@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route("/get-category/<category_id>")
 def get_category(category_id):
     conn = pyodbc.connect(
-        r"Driver={FreeTDS};"
+        "Driver={ODBC Driver 18 for SQL Server};"
         "Server=tcp:bulkyserver.database.windows.net, 1433;"
         "Database=bulky_db;"
         "Uid=admin-sql;"
@@ -49,7 +49,7 @@ def get_category(category_id):
 @app.route("/create-category", methods=["POST"])
 def create_category():
     conn = pyodbc.connect(
-        "Driver={FreeTDS};"
+        "Driver={ODBC Driver 18 for SQL Server};"
         "Server=tcp:bulkyserver.database.windows.net, 1433;"
         "Database=bulky_db;"
         "Uid=admin-sql;"
@@ -89,7 +89,7 @@ def create_category():
 # @app.route("/edit-category/<category-id>", methods=["PUT"])
 # def edit_category(category_id):
 #     conn = pyodbc.connect(
-#         "Driver={FreeTDS};"
+#         "Driver={ODBC Driver 18 for SQL Server};"
 #         "Server=tcp:bulkyserver.database.windows.net, 1433;"
 #         "Database=bulky_db;"
 #         "Uid=admin-sql;"
@@ -105,7 +105,7 @@ def create_category():
 @app.route("/delete-category/<category_id>", methods=["DELETE"])
 def delete_category(category_id):
     conn = pyodbc.connect(
-        "Driver={FreeTDS};"
+        "Driver={ODBC Driver 18 for SQL Server};"
         "Server=tcp:bulkyserver.database.windows.net, 1433;"
         "Database=bulky_db;"
         "Uid=admin-sql;"
