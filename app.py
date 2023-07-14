@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route("/get-category/<category_id>")
 def get_category(category_id):
     conn = pyodbc.connect(
-        "Driver={FreeTDS};"
+        r"Driver={FreeTDS};"
         "Server=tcp:bulkyserver.database.windows.net, 1433;"
         "Database=bulky_db;"
         "Uid=admin-sql;"
