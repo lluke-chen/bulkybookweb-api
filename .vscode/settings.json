@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "undefined/subscriptions/11a02bd9-833b-49ab-a6d6-18878828d800/resourceGroups/BulkyWebApp/providers/Microsoft.Web/sites/bulkybookweb-api",
+  "appService.deploySubpath": "."
+}
